@@ -58,7 +58,7 @@ p{
 
 .skill-row {
   width: 50%;
-  margin: 100px auto 100px;
+  margin: 80px auto 80px;
   text-align: left;
 
 }
@@ -123,8 +123,9 @@ p{
 }
 
 .img-circle {
-  /* border-radius: %; */
-  max-width: 25%;
+  border-radius: 50%;
+  max-width: 18%;
+  height: auto;
   margin-bottom: 20px;
 }
 
@@ -161,6 +162,11 @@ p{
 .hahano-link:hover{
   color: #7be3e3;
 }
+
+.top-img {
+  margin-bottom: -4px;
+}
+
 .butn {
   background: #71d1d1;
   background-image: -webkit-linear-gradient(top, #71d1d1, #599e9e);
