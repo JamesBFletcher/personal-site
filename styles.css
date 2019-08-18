@@ -65,12 +65,14 @@ p{
 
 .skill-img1 {
   width: 25%;
+  max-width: 225px;
   float: left;
   margin-right: 30px;
 }
 
 .skill-img2 {
   width: 25%;
+  max-width: 225px;
   float: right;
   margin-left: 30px;
 }
