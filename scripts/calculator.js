@@ -1,3 +1,6 @@
+
+// standard hash and randomization functions - these are NOT MINE
+
 function xmur3(str) {
     for(var i = 0, h = 1779033703 ^ str.length; i < str.length; i++)
         h = Math.imul(h ^ str.charCodeAt(i), 3432918353),
@@ -21,18 +24,32 @@ function mulberry32(a) {
 function calculate() {
   var name1 = prompt("Enter your name").toLowerCase().split(" ").join("");
   var name2 = prompt("Enter their name").toLowerCase().split(" ").join("");
-  var names
-  if (name1 > name2) {
-      names = name1 + name2;
+  // var names
+  // if (name1 > name2) {
+  //     names = name1 + name2;
+  // } else {
+  //     names = name2 + name1;
+  // }
+
+  comb1 = name1 + name2
+  comb2 = name2 + name1
+
+  var seed1 = xmur3(comb1);
+  var rand1 = mulberry32(seed1());
+
+  var seed2 = xmur3(comb2);
+  var rand2 = mulberry32(seed2());
+
+  score1 = Math.floor(rand1() * 100);
+  score2 = Math.floor(rand2() * 100);
+
+  var score
+
+  if (score1 > score2) {
+    score = score1
   } else {
-      names = name2 + name1;
+    score = score2
   }
-
-  var seed = xmur3(names);
-
-  var rand = mulberry32(seed());
-
-  score = Math.floor(rand() * 100);
 
   exc1 = ["james", "jake", "jakefletcher", "jamesfletcher"];
   exc2 = ["shannon", "shannonlee"];
