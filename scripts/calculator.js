@@ -58,6 +58,6 @@ function calculate() {
       score = 100;
   }
 
-  alert("Your <3 score is " + score + "%");
+  alert("Your compatability score is " + score + "%");
 
 }
