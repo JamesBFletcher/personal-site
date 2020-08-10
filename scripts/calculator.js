@@ -19,8 +19,8 @@ function mulberry32(a) {
 }
 
 function calculate() {
-  var name1 = prompt("Enter your name").toLowerCase();
-  var name2 = prompt("Enter their name").toLowerCase();
+  var name1 = prompt("Enter your name").toLowerCase().split(" ").join("");
+  var name2 = prompt("Enter their name").toLowerCase().split(" ").join("");
   var names
   if (name1 > name2) {
       names = name1 + name2;
@@ -34,8 +34,8 @@ function calculate() {
 
   score = Math.floor(rand() * 100);
 
-  exc1 = ["james", "jake", "jake fletcher", "james fletcher"];
-  exc2 = ["shannon", "shannon lee"];
+  exc1 = ["james", "jake", "jakefletcher", "jamesfletcher"];
+  exc2 = ["shannon", "shannonlee"];
 
   if((exc2.includes(name1) && exc1.includes(name2)) || (exc2.includes(name2) && exc1.includes(name1))) {
       score = 100;
